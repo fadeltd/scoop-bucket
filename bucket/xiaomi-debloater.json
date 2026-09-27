@@ -1,0 +1,40 @@
+{
+    "version": "1.1.0",
+    "description": "Remove MIUI and HyperOS bloatware over ADB, without root",
+    "homepage": "https://fadeltd.github.io/xiaomi-debloater/",
+    "license": "GPL-3.0-only",
+    "depends": "adb",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fadeltd/xiaomi-debloater/releases/download/v1.1.0/xiaomi-debloater-v1.1.0-windows-amd64.exe#/xiaomi-debloater.exe",
+            "hash": "405b87e88437073200cf14123ed13c065e7a5c969622f4f79edee57af734fa75"
+        },
+        "arm64": {
+            "url": "https://github.com/fadeltd/xiaomi-debloater/releases/download/v1.1.0/xiaomi-debloater-v1.1.0-windows-arm64.exe#/xiaomi-debloater.exe",
+            "hash": "8d3ad9447bf90d31f2ae91293ce6a0155287215c22dbfe24bedcb8d73eb52d3a"
+        }
+    },
+    "bin": "xiaomi-debloater.exe",
+    "shortcuts": [
+        [
+            "xiaomi-debloater.exe",
+            "Xiaomi Debloater"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/fadeltd/xiaomi-debloater"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fadeltd/xiaomi-debloater/releases/download/v$version/xiaomi-debloater-v$version-windows-amd64.exe#/xiaomi-debloater.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/fadeltd/xiaomi-debloater/releases/download/v$version/xiaomi-debloater-v$version-windows-arm64.exe#/xiaomi-debloater.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
